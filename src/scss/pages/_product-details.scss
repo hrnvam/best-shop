@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .pd {
   &-main {
     @include content-margin-inline;
