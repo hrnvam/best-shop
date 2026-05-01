@@ -37,6 +37,10 @@ export async function initCatalog() {
   renderCatalogUI();
 }
 
+function sorted<T>(arr: T[], compareFn: (a: T, b: T) => number): T[] {
+  return [...arr].sort(compareFn);
+}
+
 export function getFilteredProducts(): Product[] {
   let products = [...allProducts];
 
@@ -55,30 +59,21 @@ export function getFilteredProducts(): Product[] {
     products = products.filter((p) => p.salesStatus === true);
 
   switch (state.sortOrder) {
-    case "price-asc": {
-      const sorted = [...products];
-      sorted.sort((a, b) => a.price - b.price);
-      products = sorted;
+    case "price-asc":
+      products = sorted(products, (a, b) => a.price - b.price);
       break;
-    }
-    case "price-desc": {
-      const sorted = [...products];
-      sorted.sort((a, b) => b.price - a.price);
-      products = sorted;
+    case "price-desc":
+      products = sorted(products, (a, b) => b.price - a.price);
       break;
-    }
-    case "name-asc": {
-      const sorted = [...products];
-      sorted.sort((a, b) => a.name.localeCompare(b.name));
-      products = sorted;
+    case "name-asc":
+      products = sorted(products, (a, b) => a.name.localeCompare(b.name));
       break;
-    }
-    case "rating": {
-      const sorted = [...products];
-      sorted.sort((a, b) => b.rating - a.rating || b.popularity - a.popularity);
-      products = sorted;
+    case "rating":
+      products = sorted(
+        products,
+        (a, b) => b.rating - a.rating || b.popularity - a.popularity,
+      );
       break;
-    }
   }
 
   return products;
