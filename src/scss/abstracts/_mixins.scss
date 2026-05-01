@@ -1,0 +1,115 @@
+@mixin on-tablet {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+
+@mixin on-large-mobile {
+  @media (min-width: $large-mobile-min-width) {
+    @content;
+  }
+}
+
+@mixin on-laptop {
+  @media (min-width: $laptop-min-width) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: $desktop-min-width) {
+    @content;
+  }
+}
+
+@mixin box-shadow() {
+  box-shadow: 0 20px 80px 0 rgb(193 199 212 / 70%);
+}
+
+@mixin sections-gap {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+
+  @include on-laptop {
+    gap: 120px;
+  }
+}
+
+@mixin section-title {
+  font-weight: 900;
+  font-size: 27px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+  @include on-tablet {
+    font-size: 30px;
+  }
+
+  @include on-laptop {
+    font-size: 40px;
+  }
+}
+
+@mixin content-margin-inline() {
+  margin-inline: 16px;
+
+  @include on-tablet {
+    margin-inline: 72px;
+  }
+
+  @include on-laptop {
+    margin-inline: 80px;
+  }
+
+  @include on-desktop {
+    max-width: 1300px;
+    margin-inline: auto;
+  }
+}
+
+@mixin link-button() {
+  font-size: 15px;
+  font-weight: 700;
+  background-color: $primary-accent;
+  padding: 10px 25px;
+  width: fit-content;
+  color: white;
+}
+
+@mixin darker-back($url) {
+  background-image:
+    linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url($url);
+}
+
+@mixin central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hover($property, $toValue) {
+  transition: #{$property} $effect-duration;
+
+  &:hover {
+    #{$property}: $toValue;
+  }
+}
+
+@mixin page-grid {
+  @include content-margin-inline;
+
+  --columns: 6;
+
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+  @include on-tablet {
+    --columns: 6;
+  }
+
+  @include on-laptop {
+    --columns: 12;
+  }
+}

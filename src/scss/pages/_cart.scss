@@ -1,0 +1,281 @@
+.cart-banner {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: url("/src/assets/images/my_cart/banner_image.jpg") center / cover
+    no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  @include on-tablet {
+    height: 220px;
+  }
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgb(0 0 0 / 35%);
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+
+    @include on-tablet {
+      font-size: 50px;
+    }
+  }
+}
+
+.cart {
+  &-main {
+    @include content-margin-inline;
+
+    margin-top: 70px;
+  }
+
+  &-wrapper {
+    width: 100%;
+  }
+
+  &-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+
+    @include on-tablet {
+      display: table;
+      white-space: normal;
+    }
+
+    &__head-row {
+      background-color: $gray-dark;
+      color: #fff;
+
+      .cart-table__th {
+        padding: 14px 16px;
+        font-size: 0.78rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-align: center;
+
+        &:nth-child(2) {
+          text-align: left;
+        }
+      }
+    }
+
+    tbody tr {
+      border-bottom: 2px solid $primary-accent;
+
+      @include hover(background, #fafafa);
+    }
+
+    td {
+      padding: 18px 16px;
+      vertical-align: middle;
+      font-size: 0.95rem;
+      color: #333;
+      text-align: center;
+    }
+
+    .cart-row__img-cell {
+      width: 80px;
+
+      @include on-tablet {
+        width: 100px;
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+
+        @include on-tablet {
+          width: 72px;
+          height: 72px;
+        }
+      }
+    }
+
+    .cart-row__name {
+      font-weight: 700;
+      min-width: 160px;
+      text-align: left;
+      white-space: normal;
+
+      @include on-laptop {
+        min-width: 250px;
+      }
+    }
+
+    .cart-row__price,
+    .cart-row__total {
+      font-weight: 700;
+      min-width: 80px;
+
+      @include on-laptop {
+        min-width: 100px;
+      }
+    }
+
+    .cart-row__qty {
+      font-weight: 700;
+      min-width: 110px;
+    }
+
+    .cart-row__delete {
+      text-align: center;
+      width: 60px;
+    }
+  }
+
+  &-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 0;
+
+    &__icon {
+      font-size: 4rem;
+      color: #ccc;
+    }
+
+    &__text {
+      font-size: 1.1rem;
+      color: #888;
+    }
+  }
+
+  &-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 26px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    border: 2px solid $primary-accent;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    background: $primary-accent;
+    color: #fff;
+
+    @include hover(transform, scale(1.05));
+
+    &--checkout {
+      width: 100%;
+      margin-top: 20px;
+      padding: 14px;
+    }
+  }
+
+  &-delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: $primary-accent;
+    font-size: 1.1rem;
+
+    @include hover(color, $button-accent);
+  }
+
+  &-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &-summary {
+    background: $gray-dark;
+    color: #fff;
+    min-width: 300px;
+    padding: 28px 32px 32px;
+    border-radius: 2px;
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+
+      &--total {
+        font-weight: 700;
+        font-size: 1.05rem;
+      }
+    }
+
+    &__label {
+      font-size: 0.95rem;
+    }
+
+    &__value {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    &__divider {
+      border: none;
+      border-top: 1px solid $primary-accent;
+      margin: 0;
+    }
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  &-thank-you {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: $primary-accent;
+    padding: 40px 0;
+  }
+}
+
+.qty-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  &__btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 2px 4px;
+    font-weight: 700;
+
+    @include hover(color, $primary-accent);
+  }
+
+  &__value {
+    min-width: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+}

@@ -1,0 +1,13 @@
+.star {
+  color: $star-color-gray;
+
+  &--full {
+    color: $star-color;
+  }
+
+  &--half {
+    background: linear-gradient(90deg, $star-color 50%, $star-color-gray 50%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

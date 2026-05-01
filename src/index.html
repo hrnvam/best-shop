@@ -1,1 +1,318 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>BEST SHOP</title>
+  </head>
+  <body>
+    <header class="header" id="header-root">
+    </header>
 
+    <section class="smart-styles">
+      <div class="container">
+        <div class="slogan">
+          <h1 class="slogan__title">Smart Styles for Every Destination</h1>
+          <p class="slogan__text">
+            Phasellus risus turpis, pretium sit amet magna non, molestie
+            ultricies enim. <br />
+            Nullam pulvinar felis at metus.
+          </p>
+          <a href="/src/html/catalog.html" class="slogan__link"
+            >View All Items</a
+          >
+        </div>
+        <img
+          src="/src/assets/images/homepage/header-image.png"
+          alt="Smart Styles"
+          class="smart-styles__image"
+        />
+      </div>
+    </section>
+
+    <div class="sections">
+      <section class="promo section">
+        <div class="container promo__container">
+          <div class="promo__info">
+            <div class="promo__author">
+              <img
+                src="/src/assets/images/homepage/CMO-image.png"
+                alt="Lillian Bennett"
+                class="promo__author-img"
+              />
+              <div class="promo__author-text">
+                <span class="promo__author-name">Lillian Bennett</span>
+                <span class="promo__author-role">Chief Marketing Officer</span>
+              </div>
+            </div>
+            <h2 class="promo__title">Aliquam Faucibus Odionecom.</h2>
+            <p class="promo__text">
+              Duis vestibulum elit vel neque pharetra vulputate. Quisque
+              scelerisque nisi urna. Duis rutrum non risus in imperdiet. Proin
+              molestie accumsan nulla sit.
+            </p>
+            <p class="promo__text">
+              Namaki duis vestibulum elit vel neque pharetra vulputate. Quisque
+              scelerisque nisi urna.
+            </p>
+          </div>
+
+          <div class="promo__banner">
+            <h3 class="promo__discount-title">25 % Discount</h3>
+            <p class="promo__discount-text">
+              Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut
+              imperdiet et leo in vulputate.
+            </p>
+            <a class="promo__link" href="#">Get Discount</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="travel section">
+        <div class="travel__info-box section__info-box">
+          <h3 class="travel__title section__title">Travel suitcases</h3>
+          <p class="travel__subtitle section__subtitle">
+            Duis vestibulum elit vel neque pharetra
+          </p>
+        </div>
+        <div class="travel__card-box section__card-box">
+          <div class="travel__card travel__card-1 section__card">
+            <p class="travel__card-title">Duis vestibulum elit vel neque.</p>
+            <p class="travel__card-text">
+              Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque
+              nisi.
+            </p>
+          </div>
+          <div class="travel__card travel__card-2 section__card">
+            <p class="travel__card-title">Neque vestibulum elit nequvel.</p>
+            <p class="travel__card-text">
+              Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque
+              nisi.
+            </p>
+          </div>
+          <div class="travel__card travel__card-3 section__card">
+            <p class="travel__card-title">Elituis stibulum elit velneque.</p>
+            <p class="travel__card-text">
+              Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque
+              nisi.
+            </p>
+          </div>
+          <div class="travel__card travel__card-4 section__card">
+            <p class="travel__card-title">Vel vestibulum elit tuvel euqen.</p>
+            <p class="travel__card-text">
+              Duis vestibulum vel neque pharetra vulputate. Quisque scelerisque
+              nisi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="selected section">
+        <div class="selected__info-box section__info-box">
+          <h3 class="selected__title section__title">Selected Products</h3>
+          <p class="selected__subtitle section__subtitle">
+            Duis vestibulum elit vel neque pharetra
+          </p>
+        </div>
+        <div
+          class="selected__card-box section__card-box"
+          id="selected-products-container"
+        ></div>
+      </section>
+
+      <section class="offer section">
+        <div class="offer__back">
+          <div class="offer__box">
+            <p class="offer__discount">50%</p>
+            <p class="offer__text">
+              Curabitur vulputate arcu odio, ac facilisis diam.
+            </p>
+          </div>
+          <div class="offer__box">
+            <p class="offer__title">Offer Of The Month</p>
+            <p class="offer__subtitle">
+              Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut
+              imperdiet et leo in vulputate.
+            </p>
+            <p class="offer__link">Get Offer Today</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="news section">
+        <div class="news__info-box section__info-box">
+          <h3 class="news__title section__title">New Products Arival</h3>
+          <p class="news__subtitle section__subtitle">
+            Duis vestibulum elit vel neque pharetra
+          </p>
+        </div>
+        <div
+          class="news__card-box section__card-box"
+          id="new-products-container"
+        ></div>
+      </section>
+
+      <section class="customers section">
+        <div class="customers__info-box section__info-box">
+          <h3 class="customers__title section__title">
+            Our Grateful Customers
+          </h3>
+          <p class="customers__subtitle section__subtitle">
+            Duis vestibulum elit vel neque pharetra
+          </p>
+        </div>
+        <div class="customers__card-box">
+          <div class="customers__card customers__card-1">
+            <img
+              src="/src/assets/images/homepage/grateful-customer-1.png"
+              alt="customer"
+              class="customers__card-image"
+            />
+            <p class="customers__card-review">
+              Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut
+              mperdiet et leo in vulputate.
+            </p>
+            <p class="customers__card-name">Ethan Wade, New York</p>
+          </div>
+          <div class="customers__card customers__card-2">
+            <img
+              src="/src/assets/images/homepage/grateful-customer-2.png"
+              alt="customer"
+              class="customers__card-image"
+            />
+            <p class="customers__card-review">
+              Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut
+              mperdiet et leo in vulputate.
+            </p>
+            <p class="customers__card-name">Jane Reyes, California</p>
+          </div>
+          <div class="customers__card customers__card-3">
+            <img
+              src="/src/assets/images/homepage/grateful-customer-3.png"
+              alt="customer"
+              class="customers__card-image"
+            />
+            <p class="customers__card-review">
+              Curabitur vulputate arcu odio, ac facilisis diam accumsan ut. Ut
+              mperdiet et leo in vulputate.
+            </p>
+            <p class="customers__card-name">Erica Banks, Miami</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="auth-modal" id="auth-modal" aria-hidden="true">
+      <div class="auth-modal__backdrop" id="auth-modal-backdrop"></div>
+      <div class="auth-card" role="dialog" aria-modal="true">
+        <button
+          class="auth-card__close"
+          id="auth-modal-close"
+          aria-label="Close"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="auth-tabs">
+          <button
+            class="auth-tabs__btn auth-tabs__btn--active"
+            data-tab="login"
+          >
+            Log In
+          </button>
+          <button class="auth-tabs__btn" data-tab="register">Register</button>
+        </div>
+
+        <div class="auth-panel auth-panel--active" id="auth-panel-login">
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Email address <span class="auth-field__required">*</span></label
+            >
+            <input class="auth-field__input" id="login-email" type="email" />
+          </div>
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Password <span class="auth-field__required">*</span></label
+            >
+            <div class="auth-field__input-wrap">
+              <input
+                class="auth-field__input"
+                id="login-password"
+                type="password"
+              />
+              <button class="auth-field__eye" id="login-eye" type="button">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="auth-row">
+            <label class="auth-check-label">
+              <input
+                type="checkbox"
+                id="login-remember"
+                class="auth-checkbox"
+              />
+              Remember me
+            </label>
+            <a href="#" class="auth-link">Forgot Your Password?</a>
+          </div>
+          <p class="auth-msg" id="login-msg"></p>
+          <button class="auth-btn" id="login-submit">LOG IN</button>
+        </div>
+
+        <div class="auth-panel" id="auth-panel-register">
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Full Name <span class="auth-field__required">*</span></label
+            >
+            <input class="auth-field__input" id="reg-name" type="text" />
+          </div>
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Email address <span class="auth-field__required">*</span></label
+            >
+            <input class="auth-field__input" id="reg-email" type="email" />
+          </div>
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Password <span class="auth-field__required">*</span></label
+            >
+            <div class="auth-field__input-wrap">
+              <input
+                class="auth-field__input"
+                id="reg-password"
+                type="password"
+              />
+              <button class="auth-field__eye" id="reg-eye" type="button">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Confirm Password
+              <span class="auth-field__required">*</span></label
+            >
+            <input class="auth-field__input" id="reg-confirm" type="password" />
+          </div>
+          <p class="auth-msg" id="reg-msg"></p>
+          <button class="auth-btn" id="reg-submit">REGISTER</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="toast" id="toast">
+      <span id="toastMessage">Added to cart!</span>
+    </div>
+
+    <footer class="footer" id="footer-root">
+    </footer>
+
+    <script type="module" defer src="/dist/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,243 @@
+.auth {
+  &-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+
+    &--open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    &__backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgb(0 0 0 / 50%);
+    }
+  }
+
+  &-card {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    width: 100%;
+    max-width: 520px;
+    padding: 28px 20px 36px;
+    max-height: 100vh;
+    overflow-y: auto;
+    transform: translateY(20px);
+    transition: transform 0.25s ease;
+
+    .auth-modal--open & {
+      transform: translateY(0);
+    }
+
+    @include on-tablet {
+      padding: 40px 48px 48px;
+      max-height: 90vh;
+    }
+
+    &__close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      color: #aaa;
+      cursor: pointer;
+
+      @include hover(color, $primary-accent);
+    }
+  }
+
+  &-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid #e8e8e8;
+    margin-bottom: 32px;
+
+    &__btn {
+      background: none;
+      border: none;
+      padding: 10px 24px 10px 0;
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: #aaa;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.15s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: $primary-accent;
+        transform: scaleX(0);
+        transition: transform 0.2s ease;
+      }
+
+      &--active {
+        color: #1a1a1a;
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
+
+      &:hover {
+        color: #333;
+      }
+    }
+  }
+
+  &-panel {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  &-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    &__label {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #1a1a1a;
+    }
+
+    &__required {
+      color: $primary-accent;
+      margin-left: 2px;
+    }
+
+    &__input-wrap {
+      position: relative;
+    }
+
+    &__input {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1.5px solid $primary-accent;
+      border-radius: 0;
+      font-size: 0.92rem;
+      color: #333;
+      background: #fff;
+      box-sizing: border-box;
+      transition:
+        border-color 0.15s,
+        box-shadow 0.15s;
+      font-family: inherit;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($primary-accent, 0.12);
+      }
+
+      // when inside .input-wrap, add right padding for eye icon
+      .auth-field__input-wrap & {
+        padding-right: 46px;
+      }
+    }
+
+    &__eye {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #999;
+      font-size: 1rem;
+      padding: 0;
+      line-height: 1;
+
+      @include hover(color, $primary-accent);
+    }
+  }
+
+  &-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  &-check-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: #555;
+    cursor: pointer;
+  }
+
+  &-checkbox {
+    accent-color: $primary-accent;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  &-link {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: $primary-accent;
+
+    @include hover(opacity, 0.85);
+  }
+
+  &-msg {
+    font-size: 0.85rem;
+    font-weight: 600;
+    min-height: 18px;
+    margin: 0;
+
+    &--error {
+      color: #e74c3c;
+    }
+
+    &--success {
+      color: #27ae60;
+    }
+  }
+
+  &-btn {
+    width: 100%;
+    padding: 15px;
+    background: $primary-accent;
+    color: #fff;
+    border: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: inherit;
+
+    @include hover(opacity, 0.85);
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+}

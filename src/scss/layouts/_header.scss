@@ -1,0 +1,279 @@
+.header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 1000;
+  padding-bottom: 24px;
+
+  .container {
+    @include content-margin-inline;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 15px;
+
+    @include on-tablet {
+      padding-block: 20px;
+    }
+  }
+
+  &__socials {
+    display: none;
+    gap: 15px;
+
+    @include on-tablet {
+      display: flex;
+    }
+
+    &-icon {
+      color: #000;
+      font-size: 18px;
+
+      @include hover(color, $button-accent);
+    }
+  }
+
+  &__logo {
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+
+      @include hover(transform, scale(1.1));
+    }
+
+    &-img {
+      height: 24px;
+      padding: 4px;
+      background-color: $primary-accent;
+      border-radius: 6px;
+
+      @include on-tablet {
+        height: 32px;
+      }
+    }
+
+    &-title {
+      color: $primary-accent;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0;
+
+      @include on-tablet {
+        font-size: 26px;
+      }
+    }
+  }
+
+  &__user-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__user-action {
+    width: 20px;
+    height: 20px;
+  }
+
+  &__icon-btn {
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+
+    @include hover(color, $button-accent);
+
+    position: relative;
+
+    &--burger {
+      @include on-tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__divider {
+    display: none;
+    height: 1px;
+    background-color: #eee;
+    border: none;
+    margin: 0;
+
+    @include on-tablet {
+      display: block;
+    }
+  }
+
+  &__nav {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background: #fff;
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    z-index: 999;
+
+    &--open {
+      left: 0;
+    }
+
+    @include on-tablet {
+      position: static;
+      height: auto;
+      width: auto;
+      background: transparent;
+      display: block;
+      margin-block: 15px;
+      overflow: visible;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      padding: 20px;
+      margin: 0;
+
+      @include on-tablet {
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        padding: 0;
+      }
+    }
+
+    &-item {
+      width: 100%;
+      border-bottom: 1px solid #f9f9f9;
+      position: relative;
+
+      @include on-tablet {
+        width: auto;
+        border: none;
+      }
+
+      @include on-tablet {
+        &--dropdown:hover {
+          .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+          }
+
+          .header__nav-icon {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding-block: 15px;
+      text-decoration: none;
+      color: #000;
+      font-weight: 600;
+      font-size: 18px;
+
+      @include hover(color, $button-accent);
+
+      &--active {
+        color: $primary-accent;
+      }
+
+      @include on-tablet {
+        padding-block: 0;
+        font-size: 16px;
+      }
+    }
+
+    &-icon {
+      display: inline-flex;
+      transition: transform 0.3s ease;
+      font-size: 12px;
+
+      &::before {
+        content: "\f107";
+        font-family: "Font Awesome 6 Free", sans-serif;
+        font-weight: 900;
+      }
+    }
+  }
+}
+
+.dropdown {
+  display: none;
+
+  @include on-tablet {
+    display: block;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    min-width: 320px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 10%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 10px;
+    z-index: 1000;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+
+    @include hover(background, #fdf2f8);
+  }
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background-color: $primary-accent;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+
+  &.bump {
+    animation: cart-bump 0.3s ease;
+  }
+}
+
+@keyframes cart-bump {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

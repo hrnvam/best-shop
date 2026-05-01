@@ -1,0 +1,79 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include hover(transform, scale(1.05));
+
+  &__image {
+    @include box-shadow;
+
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    padding-inline: 20px;
+
+    @include on-tablet {
+      font-size: 17px;
+    }
+
+    @include on-laptop {
+      font-size: 19px;
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: $gray-dark;
+    text-align: center;
+
+    @include on-tablet {
+      font-size: 17px;
+    }
+  }
+
+  &__link {
+    @include link-button;
+    @include hover(background-color, $button-accent);
+
+    align-self: center;
+    margin-top: auto;
+  }
+
+  &-sale {
+    position: relative;
+
+    &::before {
+      content: "SALE";
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background-color: $primary-accent;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 6px 12px;
+      z-index: 2;
+    }
+  }
+}

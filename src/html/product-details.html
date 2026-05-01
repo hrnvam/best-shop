@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>BEST SHOP</title>
+  </head>
+  <body>
+    <header class="header" id="header-root">
+    </header>
+
+    <main class="pd-main">
+      <div class="container">
+        <section class="pd-top">
+          <div class="pd-gallery">
+            <div class="pd-gallery__main">
+              <img
+                id="pd-main-img"
+                src=""
+                alt="Product image"
+                class="pd-gallery__main-img"
+              />
+            </div>
+            <div class="pd-gallery__thumbs" id="pd-thumbs"></div>
+          </div>
+
+          <div class="pd-info">
+            <h1 class="pd-info__name" id="pd-name">—</h1>
+
+            <div class="pd-info__rating">
+              <div class="pd-stars" id="pd-stars"></div>
+              <span class="pd-info__review-count" id="pd-review-count"
+                >(0 Clients Review)</span
+              >
+            </div>
+
+            <p class="pd-info__price" id="pd-price">$0</p>
+
+            <p class="pd-info__desc" id="pd-desc-1">
+              The new Global Explorer Max Comfort Suitcase Pro is a bold
+              reimagining of travel essentials, designed to elevate every
+              journey. Made with at least 30% recycled materials, its
+              lightweight yet impact-resistant shell combines eco- conscious
+              innovation with rugged durability.
+            </p>
+            <p class="pd-info__desc" id="pd-desc-2">
+              The ergonomic handle and GlideMotion spinner wheels ensure
+              effortless mobility while making a statement in sleek design.
+              Inside, the modular compartments and adjustable straps keep your
+              belongings secure and neatly organized, no matter the destination.
+            </p>
+
+            <div class="pd-info__selects">
+              <div class="pd-select-group">
+                <label class="pd-select-group__label">Size</label>
+                <select class="pd-select" id="pd-select-size">
+                  <option value="">Choose option</option>
+                </select>
+              </div>
+              <div class="pd-select-group">
+                <label class="pd-select-group__label">Color</label>
+                <select class="pd-select" id="pd-select-color">
+                  <option value="">Choose option</option>
+                </select>
+              </div>
+              <div class="pd-select-group">
+                <label class="pd-select-group__label">Category</label>
+                <select class="pd-select" id="pd-select-category">
+                  <option value="">Choose option</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="pd-info__actions">
+              <div class="pd-qty">
+                <button
+                  class="pd-qty__btn"
+                  id="pd-qty-minus"
+                  aria-label="Decrease"
+                >
+                  -
+                </button>
+                <span class="pd-qty__value" id="pd-qty-value">1</span>
+                <button
+                  class="pd-qty__btn"
+                  id="pd-qty-plus"
+                  aria-label="Increase"
+                >
+                  +
+                </button>
+              </div>
+              <button class="pd-add-btn" id="pd-add-to-cart">
+                Add To Cart
+              </button>
+            </div>
+
+            <div class="pd-info__payment">
+              <span class="pd-info__payment-label">Payment:</span>
+              <img
+                src="/src/assets/images/payment/visa.png"
+                alt="Visa"
+                class="pd-info__payment-icon"
+              />
+              <img
+                src="/src/assets/images/payment/amex.png"
+                alt="Amex"
+                class="pd-info__payment-icon"
+              />
+              <img
+                src="/src/assets/images/payment/mastercard.png"
+                alt="Mastercard"
+                class="pd-info__payment-icon"
+              />
+              <img
+                src="/src/assets/images/payment/paypal.png"
+                alt="PayPal"
+                class="pd-info__payment-icon"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="pd-tabs">
+          <div class="pd-tabs__nav">
+            <button
+              class="pd-tabs__btn pd-tabs__btn--active"
+              data-tab="details"
+            >
+              Details
+            </button>
+            <button class="pd-tabs__btn" data-tab="reviews">Reviews</button>
+            <button class="pd-tabs__btn" data-tab="shipping">
+              Shipping Policy
+            </button>
+          </div>
+
+          <div class="pd-tabs__panel pd-tabs__panel--active" id="tab-details">
+            <p>
+              Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh
+              mollis. Nulla porta risus id neque tempor, in efficitur justo
+              imperdiet. Etiam a ex at ante tincidunt imperdiet. Nunc congue ex
+              vel nisl viverra, sit amet aliquet lectus ullamcorper. Praesent
+              luctus lacus non lorem elementum, eu tristique sapien suscipit.
+              Sed bibendum, ipsum nec viverra malesuada, erat nisi sodales
+              purus, eget hendrerit dui ligula eu enim. Ut non est nisi.
+              Pellentesque tristique pretium dolor eu commodo. Proin iaculis
+              nibh vitae lectus mollis bibendum. Quisque varius eget urna sit
+              amet luctus. Suspendisse potenti. Curabitur ac placerat est, sit
+              amet sodales risus. Pellentesque viverra dui auctor, ullamcorper
+              turpis pharetra, facilisis quam.
+            </p>
+            <p>
+              Proin iaculis nibh vitae lectus mollis bibendum. Quisque varius
+              eget urna sit amet luctus. Suspendisse potenti. Curabitur ac
+              placerat est, sit amet sodales risus. Pellentesque viverra dui
+              auctor, ullamcorper turpis pharetra, facilisis quam. Proin iaculis
+              nibh vitae lectus mollis bibendum.
+            </p>
+            <p>
+              Quisque varius eget urna sit amet luctus. Suspendisse potenti.
+              Curabitur ac placerat est, sit amet sodales risus. Pellentesque
+              viverra dui auctor, ullamcorper turpis pharetra, facilisis quam.
+            </p>
+          </div>
+
+          <div class="pd-tabs__panel" id="tab-reviews">
+            <div class="pd-reviews">
+              <div class="pd-reviews__list-wrap">
+                <h3 class="pd-reviews__count-title" id="pd-reviews-title">
+                  0 reviews
+                </h3>
+                <div class="pd-reviews__list" id="pd-reviews-list"></div>
+              </div>
+
+              <div class="pd-reviews__form-wrap">
+                <h3 class="pd-reviews__form-title">Add Review</h3>
+                <p class="pd-reviews__form-note">
+                  Your email address won't be shared with anybody. Required
+                  fields have the symbol
+                  <span class="pd-reviews__required">*</span>
+                </p>
+
+                <div class="pd-star-picker">
+                  <span class="pd-star-picker__label">RATE PRODUCT</span>
+                  <div class="pd-star-picker__stars" id="pd-star-picker">
+                    <i class="far fa-star" data-star="1"></i>
+                    <i class="far fa-star" data-star="2"></i>
+                    <i class="far fa-star" data-star="3"></i>
+                    <i class="far fa-star" data-star="4"></i>
+                    <i class="far fa-star" data-star="5"></i>
+                  </div>
+                </div>
+
+                <div class="pd-review-form" id="pd-review-form">
+                  <textarea
+                    class="pd-review-form__textarea"
+                    id="review-text"
+                    placeholder="Your Review*"
+                    rows="6"
+                  ></textarea>
+
+                  <div class="pd-review-form__row">
+                    <input
+                      class="pd-review-form__input"
+                      id="review-name"
+                      type="text"
+                      placeholder="Your Name*"
+                    />
+                    <input
+                      class="pd-review-form__input"
+                      id="review-email"
+                      type="email"
+                      placeholder="Your Email*"
+                    />
+                  </div>
+
+                  <label class="pd-review-form__check-label">
+                    <input
+                      type="checkbox"
+                      id="review-save"
+                      class="pd-review-form__checkbox"
+                    />
+                    Save my name, email, and website in this browser for when I
+                    leave another comment.
+                  </label>
+
+                  <button
+                    class="pd-add-btn pd-review-form__submit"
+                    id="review-submit"
+                  >
+                    Submit
+                  </button>
+
+                  <p class="pd-review-form__msg" id="review-msg"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="pd-tabs__panel" id="tab-shipping">
+            <p>
+              All orders are processed within 1-2 business days (excluding
+              weekends and holidays) after receiving your order confirmation
+              email. You will receive another notification when your order has
+              shipped.
+            </p>
+            <p>
+              We offer free shipping on all domestic orders over $100.
+              International shipping rates and estimated delivery times vary by
+              location. Please allow 7–14 business days for international
+              deliveries.
+            </p>
+            <p>
+              If you need to return an item, please contact us within 30 days of
+              receiving your order. Items must be unused, in their original
+              packaging, and accompanied by a receipt or proof of purchase.
+            </p>
+          </div>
+        </section>
+
+        <section class="pd-related">
+          <h2 class="pd-related__title">You May Also Like</h2>
+          <div class="pd-related__grid" id="pd-related-grid"></div>
+        </section>
+      </div>
+    </main>
+    <div class="toast" id="toast">
+      <span id="toastMessage"></span>
+    </div>
+
+    <div class="auth-modal" id="auth-modal" aria-hidden="true">
+      <div class="auth-modal__backdrop" id="auth-modal-backdrop"></div>
+      <div class="auth-card" role="dialog" aria-modal="true">
+        <button
+          class="auth-card__close"
+          id="auth-modal-close"
+          aria-label="Close"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+
+        <div class="auth-tabs">
+          <button
+            class="auth-tabs__btn auth-tabs__btn--active"
+            data-tab="login"
+          >
+            Log In
+          </button>
+          <button class="auth-tabs__btn" data-tab="register">Register</button>
+        </div>
+
+        <div class="auth-panel auth-panel--active" id="auth-panel-login">
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Email address <span class="auth-field__required">*</span></label
+            >
+            <input class="auth-field__input" id="login-email" type="email" />
+          </div>
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Password <span class="auth-field__required">*</span></label
+            >
+            <div class="auth-field__input-wrap">
+              <input
+                class="auth-field__input"
+                id="login-password"
+                type="password"
+              />
+              <button class="auth-field__eye" id="login-eye" type="button">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="auth-row">
+            <label class="auth-check-label">
+              <input
+                type="checkbox"
+                id="login-remember"
+                class="auth-checkbox"
+              />
+              Remember me
+            </label>
+            <a href="#" class="auth-link">Forgot Your Password?</a>
+          </div>
+          <p class="auth-msg" id="login-msg"></p>
+          <button class="auth-btn" id="login-submit">LOG IN</button>
+        </div>
+
+        <div class="auth-panel" id="auth-panel-register">
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Full Name <span class="auth-field__required">*</span></label
+            >
+            <input class="auth-field__input" id="reg-name" type="text" />
+          </div>
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Email address <span class="auth-field__required">*</span></label
+            >
+            <input class="auth-field__input" id="reg-email" type="email" />
+          </div>
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Password <span class="auth-field__required">*</span></label
+            >
+            <div class="auth-field__input-wrap">
+              <input
+                class="auth-field__input"
+                id="reg-password"
+                type="password"
+              />
+              <button class="auth-field__eye" id="reg-eye" type="button">
+                <i class="far fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="auth-field">
+            <label class="auth-field__label"
+              >Confirm Password
+              <span class="auth-field__required">*</span></label
+            >
+            <input class="auth-field__input" id="reg-confirm" type="password" />
+          </div>
+          <p class="auth-msg" id="reg-msg"></p>
+          <button class="auth-btn" id="reg-submit">REGISTER</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer" id="footer-root">
+    </footer>
+
+    <script type="module" defer src="/dist/js/productDetails.js"></script>
+    <script type="module" defer src="/dist/js/main.js"></script>
+  </body>
+</html>

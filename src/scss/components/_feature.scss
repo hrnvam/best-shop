@@ -1,0 +1,49 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-items: center;
+  gap: 10px;
+
+  @include on-large-mobile {
+    gap: 20px;
+  }
+
+  @include on-tablet {
+    justify-content: space-between;
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
+.feature {
+  gap: 12px;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    text-align: center;
+    font-size: 15px;
+
+    @include on-tablet {
+      font-size: 18px;
+    }
+
+    @include on-laptop {
+      font-size: 20px;
+    }
+  }
+
+  &__description {
+    text-align: center;
+    font-size: 14px;
+
+    @include on-tablet {
+      font-size: 17px;
+    }
+  }
+
+  @include on-tablet {
+    gap: 22px;
+  }
+}

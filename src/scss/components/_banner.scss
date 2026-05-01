@@ -1,0 +1,40 @@
+.banner {
+  min-height: 220px;
+
+  @include central;
+
+  flex-direction: column;
+  gap: 20px;
+
+  @include on-tablet {
+    min-height: 300px;
+  }
+
+   @include on-laptop {
+    min-height: 500px;
+  }
+
+  &__title {
+    color: #FFF;
+    font-size: 24px;
+
+    @include on-tablet {
+      font-size: 37px;
+    }
+
+    @include on-laptop {
+      font-size: 50px;
+    }
+  }
+
+  &__text {
+    color: $star-color-gray;
+    max-width: 420px;
+    text-align: center;
+    font-size: 14px;
+
+    @include on-tablet {
+      font-size: 17px;
+    }
+  }
+}
