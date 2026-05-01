@@ -1,6 +1,5 @@
-import { fetchProducts } from "./main.js";
+import { fetchProducts, initBurgerMenu, renderDropdown } from "./main.js";
 import { getCart, saveCart, updateCartCount } from "./cartHelper.js";
-import { initBurgerMenu, renderDropdown } from "./main.js";
 import type { Product } from "./product.js";
 
 interface CartItem {

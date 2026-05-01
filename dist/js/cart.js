@@ -7,9 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { fetchProducts } from "./main.js";
+import { fetchProducts, initBurgerMenu, renderDropdown } from "./main.js";
 import { getCart, saveCart, updateCartCount } from "./cartHelper.js";
-import { initBurgerMenu, renderDropdown } from "./main.js";
 const SHIPPING_COST = 30;
 const DISCOUNT_THRESHOLD = 3000;
 const DISCOUNT_RATE = 0.1;

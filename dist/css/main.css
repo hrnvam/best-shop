@@ -26,6 +26,10 @@ img {
   display: block;
 }
 
+.visually-hidden {
+  display: none;
+}
+
 .header {
   position: sticky;
   top: 0;

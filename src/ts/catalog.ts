@@ -55,20 +55,30 @@ export function getFilteredProducts(): Product[] {
     products = products.filter((p) => p.salesStatus === true);
 
   switch (state.sortOrder) {
-    case "price-asc":
-      products = [...products].sort((a, b) => a.price - b.price);
+    case "price-asc": {
+      const sorted = [...products];
+      sorted.sort((a, b) => a.price - b.price);
+      products = sorted;
       break;
-    case "price-desc":
-      products = [...products].sort((a, b) => b.price - a.price);
+    }
+    case "price-desc": {
+      const sorted = [...products];
+      sorted.sort((a, b) => b.price - a.price);
+      products = sorted;
       break;
-    case "name-asc":
-      products = [...products].sort((a, b) => a.name.localeCompare(b.name));
+    }
+    case "name-asc": {
+      const sorted = [...products];
+      sorted.sort((a, b) => a.name.localeCompare(b.name));
+      products = sorted;
       break;
-    case "rating":
-      products = [...products].sort(
-        (a, b) => b.rating - a.rating || b.popularity - a.popularity,
-      );
+    }
+    case "rating": {
+      const sorted = [...products];
+      sorted.sort((a, b) => b.rating - a.rating || b.popularity - a.popularity);
+      products = sorted;
       break;
+    }
   }
 
   return products;
