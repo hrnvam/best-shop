@@ -22,7 +22,7 @@
               <img
                 id="pd-main-img"
                 src=""
-                alt="Product image"
+                alt="Product"
                 class="pd-gallery__main-img"
               />
             </div>
@@ -57,19 +57,19 @@
 
             <div class="pd-info__selects">
               <div class="pd-select-group">
-                <label class="pd-select-group__label">Size</label>
+                <label class="pd-select-group__label" for="pd-select-size">Size</label>
                 <select class="pd-select" id="pd-select-size">
                   <option value="">Choose option</option>
                 </select>
               </div>
               <div class="pd-select-group">
-                <label class="pd-select-group__label">Color</label>
+                <label class="pd-select-group__label" for="pd-select-color">Color</label>
                 <select class="pd-select" id="pd-select-color">
                   <option value="">Choose option</option>
                 </select>
               </div>
               <div class="pd-select-group">
-                <label class="pd-select-group__label">Category</label>
+                <label class="pd-select-group__label" for="pd-select-category">Category</label>
                 <select class="pd-select" id="pd-select-category">
                   <option value="">Choose option</option>
                 </select>
@@ -197,6 +197,7 @@
                 </div>
 
                 <div class="pd-review-form" id="pd-review-form">
+                  <label class="visually-hidden" for="review-text"></label>
                   <textarea
                     class="pd-review-form__textarea"
                     id="review-text"
@@ -205,12 +206,14 @@
                   ></textarea>
 
                   <div class="pd-review-form__row">
+                  <label class="visually-hidden" for="review-name"></label>
                     <input
                       class="pd-review-form__input"
                       id="review-name"
                       type="text"
                       placeholder="Your Name*"
                     />
+                  <label class="visually-hidden" for="review-email"></label>
                     <input
                       class="pd-review-form__input"
                       id="review-email"
@@ -219,7 +222,7 @@
                     />
                   </div>
 
-                  <label class="pd-review-form__check-label">
+                  <label class="pd-review-form__check-label" for="review-save">
                     <input
                       type="checkbox"
                       id="review-save"
@@ -271,105 +274,6 @@
     </main>
     <div class="toast" id="toast">
       <span id="toastMessage"></span>
-    </div>
-
-    <div class="auth-modal" id="auth-modal" aria-hidden="true">
-      <div class="auth-modal__backdrop" id="auth-modal-backdrop"></div>
-      <div class="auth-card" role="dialog" aria-modal="true">
-        <button
-          class="auth-card__close"
-          id="auth-modal-close"
-          aria-label="Close"
-        >
-          <i class="fas fa-times"></i>
-        </button>
-
-        <div class="auth-tabs">
-          <button
-            class="auth-tabs__btn auth-tabs__btn--active"
-            data-tab="login"
-          >
-            Log In
-          </button>
-          <button class="auth-tabs__btn" data-tab="register">Register</button>
-        </div>
-
-        <div class="auth-panel auth-panel--active" id="auth-panel-login">
-          <div class="auth-field">
-            <label class="auth-field__label"
-              >Email address <span class="auth-field__required">*</span></label
-            >
-            <input class="auth-field__input" id="login-email" type="email" />
-          </div>
-          <div class="auth-field">
-            <label class="auth-field__label"
-              >Password <span class="auth-field__required">*</span></label
-            >
-            <div class="auth-field__input-wrap">
-              <input
-                class="auth-field__input"
-                id="login-password"
-                type="password"
-              />
-              <button class="auth-field__eye" id="login-eye" type="button">
-                <i class="far fa-eye"></i>
-              </button>
-            </div>
-          </div>
-          <div class="auth-row">
-            <label class="auth-check-label">
-              <input
-                type="checkbox"
-                id="login-remember"
-                class="auth-checkbox"
-              />
-              Remember me
-            </label>
-            <a href="#" class="auth-link">Forgot Your Password?</a>
-          </div>
-          <p class="auth-msg" id="login-msg"></p>
-          <button class="auth-btn" id="login-submit">LOG IN</button>
-        </div>
-
-        <div class="auth-panel" id="auth-panel-register">
-          <div class="auth-field">
-            <label class="auth-field__label"
-              >Full Name <span class="auth-field__required">*</span></label
-            >
-            <input class="auth-field__input" id="reg-name" type="text" />
-          </div>
-          <div class="auth-field">
-            <label class="auth-field__label"
-              >Email address <span class="auth-field__required">*</span></label
-            >
-            <input class="auth-field__input" id="reg-email" type="email" />
-          </div>
-          <div class="auth-field">
-            <label class="auth-field__label"
-              >Password <span class="auth-field__required">*</span></label
-            >
-            <div class="auth-field__input-wrap">
-              <input
-                class="auth-field__input"
-                id="reg-password"
-                type="password"
-              />
-              <button class="auth-field__eye" id="reg-eye" type="button">
-                <i class="far fa-eye"></i>
-              </button>
-            </div>
-          </div>
-          <div class="auth-field">
-            <label class="auth-field__label"
-              >Confirm Password
-              <span class="auth-field__required">*</span></label
-            >
-            <input class="auth-field__input" id="reg-confirm" type="password" />
-          </div>
-          <p class="auth-msg" id="reg-msg"></p>
-          <button class="auth-btn" id="reg-submit">REGISTER</button>
-        </div>
-      </div>
     </div>
 
     <footer class="footer" id="footer-root">

@@ -1,46 +1,44 @@
 .auth {
   &-modal {
-    position: fixed;
-    inset: 0;
-    z-index: 1000;
-    display: flex;
+    border: none;
+    padding: 0;
+    background: transparent;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+
+    display: none;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
 
-    &--open {
-      opacity: 1;
-      pointer-events: all;
+    &[open] {
+      display: flex;
     }
 
-    &__backdrop {
-      position: absolute;
-      inset: 0;
+    &::backdrop {
       background: rgb(0 0 0 / 50%);
     }
   }
 
   &-card {
     position: relative;
-    z-index: 1;
     background: #fff;
     width: 100%;
     max-width: 520px;
     padding: 28px 20px 36px;
-    max-height: 100vh;
+    max-height: 90vh;
     overflow-y: auto;
     transform: translateY(20px);
     transition: transform 0.25s ease;
 
-    .auth-modal--open & {
+    .auth-modal[open] & {
       transform: translateY(0);
     }
 
     @include on-tablet {
       padding: 40px 48px 48px;
-      max-height: 90vh;
     }
 
     &__close {
@@ -150,7 +148,6 @@
         box-shadow: 0 0 0 3px rgba($primary-accent, 0.12);
       }
 
-      // when inside .input-wrap, add right padding for eye icon
       .auth-field__input-wrap & {
         padding-right: 46px;
       }

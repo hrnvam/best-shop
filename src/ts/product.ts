@@ -62,7 +62,7 @@ export function renderSection(
         const buttonText = link.textContent?.trim().toLowerCase();
 
         if (buttonText === "add to cart") {
-          const productName = productNameEl?.textContent?.trim() || "Item";
+          const productName = productNameEl?.textContent?.trim() ?? "Item";
           addToCart(productIdStr, productName);
           updateCartCount();
         } else if (buttonText === "view product") {
