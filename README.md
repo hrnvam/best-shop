@@ -1,4 +1,5 @@
-# Project template
+It is the educational project from Epam Campus Frontend Specialization
+
 This repository contains the source code for the Capstone project. The application is built using TypeScript and SCSS, and it features a fully automated development environment.
 
 To set up and run project, ensure you have Node.js installed on your computer.
