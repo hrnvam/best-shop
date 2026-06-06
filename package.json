@@ -1,5 +1,6 @@
 {
   "name": "fundamentals-project-ts-template",
+  "homepage": "https://hrnvam.github.io/best-shop/",
   "version": "1.0.0",
   "description": "Capstone Project TS Template",
   "main": "index.js",
@@ -11,7 +12,9 @@
     "ts-compile": "npx tsc",
     "lint:ts": "eslint \"src/**/*.ts\"",
     "lint:scss": "stylelint \"src/**/*.scss\" --fix",
-    "lint": "npm run lint:ts && npm run lint:scss"
+    "lint": "npm run lint:ts && npm run lint:scss",
+    "predeploy": "npm run build", 
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -27,6 +30,7 @@
     "@typescript-eslint/parser": "^8.59.1",
     "concurrently": "^9.2.1",
     "eslint": "^10.2.1",
+    "gh-pages": "^6.3.0",
     "live-server": "^1.2.2",
     "stylelint": "^17.9.1",
     "stylelint-config-standard-scss": "^17.0.0",
