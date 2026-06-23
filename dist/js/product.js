@@ -39,7 +39,7 @@ export function renderSection(products, blockName, containerId, prefix, btnText)
                     updateCartCount();
                 }
                 else if (buttonText === "view product") {
-                    window.location.href = `/src/html/product-details.html?id=${productIdStr}`;
+                    window.location.href = `product-details.html?id=${productIdStr}`;
                 }
             }
             return;
@@ -48,7 +48,7 @@ export function renderSection(products, blockName, containerId, prefix, btnText)
         if (card) {
             const productId = card.getAttribute("data-id");
             if (productId) {
-                window.location.href = `/src/html/product-details.html?id=${productId}`;
+                window.location.href = `product-details.html?id=${productId}`;
             }
         }
     };

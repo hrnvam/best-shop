@@ -66,7 +66,7 @@ export function renderSection(
           addToCart(productIdStr, productName);
           updateCartCount();
         } else if (buttonText === "view product") {
-          window.location.href = `/src/html/product-details.html?id=${productIdStr}`;
+          window.location.href = `product-details.html?id=${productIdStr}`;
         }
       }
 
@@ -77,7 +77,7 @@ export function renderSection(
     if (card) {
       const productId = card.getAttribute("data-id");
       if (productId) {
-        window.location.href = `/src/html/product-details.html?id=${productId}`;
+        window.location.href = `product-details.html?id=${productId}`;
       }
     }
   };

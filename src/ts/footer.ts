@@ -8,7 +8,7 @@ export function renderFooter(container: HTMLElement | null): void {
           <div class="benefits__box">
             <div class="benefit">
               <img
-                src="/src/assets/images/footer/benefit-1.png"
+                src="./assets/images/footer/benefit-1.png"
                 alt="benefit"
                 class="benefit__image"
               />
@@ -18,7 +18,7 @@ export function renderFooter(container: HTMLElement | null): void {
             </div>
             <div class="benefit">
               <img
-                src="/src/assets/images/footer/benefit-2.png"
+                src="./assets/images/footer/benefit-2.png"
                 alt="benefit"
                 class="benefit__image"
               />
@@ -28,7 +28,7 @@ export function renderFooter(container: HTMLElement | null): void {
             </div>
             <div class="benefit">
               <img
-                src="/src/assets/images/footer/benefit-3.png"
+                src="./assets/images/footer/benefit-3.png"
                 alt="benefit"
                 class="benefit__image"
               />
@@ -38,7 +38,7 @@ export function renderFooter(container: HTMLElement | null): void {
             </div>
             <div class="benefit">
               <img
-                src="/src/assets/images/footer/benefit-4.png"
+                src="./assets/images/footer/benefit-4.png"
                 alt="benefit"
                 class="benefit__image"
               />
@@ -52,11 +52,11 @@ export function renderFooter(container: HTMLElement | null): void {
       <div class="container">
         <div class="footer-left">
           <div class="footer-column">
-            <a href="/src/html/about.html"><h3>About Us</h3></a>
+            <a href="about.html"><h3>About Us</h3></a>
             <ul>
-              <li><a href="/src/html/about.html">Organisation</a></li>
-              <li><a href="/src/html/about.html">Partners</a></li>
-              <li><a href="/src/html/about.html">Clients</a></li>
+              <li><a href="about.html">Organisation</a></li>
+              <li><a href="about.html">Partners</a></li>
+              <li><a href="about.html">Clients</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -89,7 +89,7 @@ export function renderFooter(container: HTMLElement | null): void {
 
         <div class="footer-right">
           <div class="footer-column contact-text">
-            <a href="/src/html/contact.html"><h3>Contact Us</h3></a>
+            <a href="contact.html"><h3>Contact Us</h3></a>
             <p>
               Bendum dolor eu varius. Morbi fermentum velitsodales egetonec.
               volutpat orci. Sed ipsum felis, tristique egestas et, convallis ac
@@ -99,19 +99,19 @@ export function renderFooter(container: HTMLElement | null): void {
 
           <div class="contact-details">
             <div class="contact-item">
-              <img src="/src/assets/images/footer/contact/phone.png" alt="phone">
+              <img src="./assets/images/footer/contact/phone.png" alt="phone">
               <span>Phone: (+63) 236 6322</span>
             </div>
             <div class="contact-item">
-              <img src="/src/assets/images/footer/contact/email.png" alt="email">
+              <img src="./assets/images/footer/contact/email.png" alt="email">
               <span>public@news.com</span>
             </div>
             <div class="contact-item">
-              <img src="/src/assets/images/footer/contact/time.png" alt="time">
+              <img src="./assets/images/footer/contact/time.png" alt="time">
               <span>Mon - Fri: 10am - 6pm<br />Sat - Sun: 10am - 6pm</span>
             </div>
             <div class="contact-item">
-              <img src="/src/assets/images/footer/contact/location.png" alt="location">
+              <img src="./assets/images/footer/contact/location.png" alt="location">
               <span>639 Jade Valley, <br />Washington Dc</span>
             </div>
           </div>

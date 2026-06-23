@@ -6,7 +6,7 @@ import { renderFooter } from "./footer.js";
 
 export async function fetchProducts(): Promise<Product[]> {
   try {
-    const res = await fetch("/src/assets/data.json");
+    const res = await fetch("./assets/data.json");
     if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
     return (await res.json()).data;
   } catch (error) {
@@ -23,7 +23,7 @@ export function renderDropdown(products: Product[]) {
     .slice(0, 3)
     .map(
       (p) => `
-    <a href="/src/html/product-details.html?id=${p.id}" class="dropdown__item" style="display:flex; align-items:center; gap:15px; padding:10px; text-decoration:none; color:black;">
+    <a href="product-details.html?id=${p.id}" class="dropdown__item" style="display:flex; align-items:center; gap:15px; padding:10px; text-decoration:none; color:black;">
       <img src="${p.imageUrl}" alt="" style="width:60px; height:60px; object-fit:cover; border-radius:4px;">
       <div style="display:flex; flex-direction:column;">
         <span style="font-weight:600; font-size:14px;">${p.name}</span>

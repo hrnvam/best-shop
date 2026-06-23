@@ -3,25 +3,25 @@ import { renderFeatures, Feature } from "./features.js";
 const aboutData: Feature[] = [
   {
     id: 1,
-    icon: "/src/assets/images/contact_us/icons/location.png",
+    icon: "./assets/images/contact_us/icons/location.png",
     title: "Our Location",
     description: "1234 NW Bobcat Lane, St. Robert, MO 65584-5678",
   },
   {
     id: 2,
-    icon: "/src/assets/images/contact_us/icons/time.png",
+    icon: "./assets/images/contact_us/icons/time.png",
     title: "Operating Time",
     description: "Monday-Friday: 9am-6pm<br> Weekends: 10:30 am - 6pm",
   },
   {
     id: 3,
-    icon: "/src/assets/images/contact_us/icons/email.png",
+    icon: "./assets/images/contact_us/icons/email.png",
     title: "Our Email",
     description: "best@shop.com<br>info@bestshop.com",
   },
   {
     id: 4,
-    icon: "/src/assets/images/contact_us/icons/call.png",
+    icon: "./assets/images/contact_us/icons/call.png",
     title: "Call Us",
     description: "(268)142-8413<br>(760)265-2917",
   },
