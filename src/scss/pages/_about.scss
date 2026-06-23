@@ -1,6 +1,6 @@
 .about {
   &-banner {
-    @include darker-back("/src/assets/images/about_us/banner_image.jpg");
+    @include darker-back("../assets/images/about_us/banner_image.jpg");
   }
 
   &-main {
@@ -34,7 +34,7 @@
       }
 
       &__right {
-        background-image: url("/src/assets/images/about_us/new_arrivals_image.jpg");
+        background-image: url("../assets/images/about_us/new_arrivals_image.jpg");
         background-size: cover;
         background-position: center;
         min-height: 200px;

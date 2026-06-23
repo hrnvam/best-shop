@@ -1,6 +1,6 @@
 .contact {
   &-banner {
-    @include darker-back("/src/assets/images/contact_us/banner_image.jpg");
+    @include darker-back("../assets/images/contact_us/banner_image.jpg");
   }
 
   &-main {
@@ -26,7 +26,7 @@
     }
 
     &__left {
-      background-image: url("/src/assets/images/contact_us/feedback_image.jpg");
+      background-image: url("../assets/images/contact_us/feedback_image.jpg");
       background-size: cover;
       background-position: center;
       min-height: 200px;

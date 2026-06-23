@@ -247,7 +247,7 @@
     flex: 0 0 50%;
 
     @include darker-back(
-      "/src/assets/images/homepage/suitcases_main_banner.png"
+      "../assets/images/homepage/suitcases_main_banner.png"
     );
 
     background-size: cover;
@@ -329,7 +329,7 @@
     @for $i from 1 through 4 {
       &-#{$i} {
         @include darker-back(
-          "/src/assets/images/homepage/suitcase_real-live-#{$i}.png"
+          "../assets/images/homepage/suitcase_real-live-#{$i}.png"
         );
       }
     }
@@ -362,7 +362,7 @@
 .offer {
   &__back {
     @include darker-back(
-      "/src/assets/images/homepage/offer-of-the-month-image.png"
+      "../assets/images/homepage/offer-of-the-month-image.png"
     );
 
     background-size: cover;
