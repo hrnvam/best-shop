@@ -9,7 +9,7 @@
     "predev": "rimraf dist",
     "dev": "concurrently \"npx sass src/scss/main.scss dist/css/main.css --watch\" \"tsc --watch\" \"live-server . --open=src/html/index.html --port=3000\"",
     "build": "npx sass src/scss/main.scss dist/css/main.css && npx tsc && npm run copy-assets",
-    "copy-assets": "npx cpx \"src/html/**/*.html\" dist && npx cpx \"src/assets/**/*\" dist/assets",
+    "copy-assets": "npx cpx \"src/index.html\" dist && npx cpx \"src/html/**/*.html\" dist && npx cpx \"src/assets/**/*\" dist/assets",
     "ts-compile": "npx tsc",
     "lint:ts": "eslint \"src/**/*.ts\"",
     "lint:scss": "stylelint \"src/**/*.scss\" --fix",
