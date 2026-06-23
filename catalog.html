@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <title>BEST SHOP</title>
+  </head>
+  <body>
+    <header class="header" id="header-root">
+    </header>
+
+    <div class="catalog-page-container">
+      <main class="catalog-main">
+        <div class="catalog-toolbar">
+          <p class="results-count" id="resultsCount">
+            Showing 1–12 of 15 results
+          </p>
+          <div class="toolbar-right">
+            <label class="visually-hidden" for="sortSelect">Sort</label>
+            <div class="custom-select-wrapper">
+              <select class="custom-select" id="sortSelect">
+                <option value="default">Default Sorting</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Name: A–Z</option>
+                <option value="rating">Top Rated</option>
+              </select>
+              <svg class="select-arrow" viewBox="0 0 10 6">
+                <path
+                  d="M1 1l4 4 4-4"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  fill="none"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+        <nav
+          class="pagination"
+          id="pagination"
+          aria-label="Page navigation"
+        ></nav>
+        <div class="catalog-filters" id="catalog-filters">
+          <div class="catalog-filters__panel" id="filters-panel">
+            <hr class="catalog-filters__divider" />
+            <div class="catalog-filters__row">
+              <div class="catalog-filters__group">
+                <label class="catalog-filters__group-label" for="filter-size">Size</label>
+                <div class="custom-select-wrapper">
+                  <select class="custom-select" id="filter-size">
+                    <option value="">Choose option</option>
+                  </select>
+                  <svg class="select-arrow" viewBox="0 0 10 6">
+                    <path
+                      d="M1 1l4 4 4-4"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="catalog-filters__group">
+                <label class="catalog-filters__group-label" for="filter-color">Color</label>
+                <div class="custom-select-wrapper">
+                  <select class="custom-select" id="filter-color">
+                    <option value="">Choose option</option>
+                  </select>
+                  <svg class="select-arrow" viewBox="0 0 10 6">
+                    <path
+                      d="M1 1l4 4 4-4"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="catalog-filters__group">
+                <label class="catalog-filters__group-label" for="filter-category">Category</label>
+                <div class="custom-select-wrapper">
+                  <select class="custom-select" id="filter-category">
+                    <option value="">Choose option</option>
+                  </select>
+                  <svg class="select-arrow" viewBox="0 0 10 6">
+                    <path
+                      d="M1 1l4 4 4-4"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      fill="none"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div
+                class="catalog-filters__group catalog-filters__group--toggle"
+              >
+                <label class="catalog-filters__group-label" for="filter-sales">Sales</label>
+                <label class="catalog-filters__toggle">
+                  <input
+                    type="checkbox"
+                    id="filter-sales"
+                    class="catalog-filters__toggle-input"
+                  />
+                  <span class="catalog-filters__toggle-track"></span>
+                </label>
+              </div>
+            </div>
+            <hr class="catalog-filters__divider" />
+
+            <div class="catalog-filters__actions">
+              <button
+                class="catalog-filters__btn catalog-filters__btn--clear"
+                id="filters-clear"
+              >
+                CLEAR FILTERS
+              </button>
+              <button
+                class="catalog-filters__btn catalog-filters__btn--hide"
+                id="filters-hide"
+              >
+                HIDE FILTERS
+              </button>
+            </div>
+          </div>
+
+          <button
+            class="catalog-filters__show-btn"
+            id="filters-show"
+            style="display: none"
+          >
+            SHOW FILTERS
+          </button>
+        </div>
+      </main>
+
+      <aside class="sidebar">
+        <div class="search-box">
+          <label class="visually-hidden" for="searchInput">Search</label>
+          <input type="text" id="searchInput" placeholder="Search models…" />
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+        </div>
+        <div class="sidebar-section">
+          <h3 class="sidebar-title">Top Best Sets</h3>
+          <ul class="best-sets" id="bestSets"></ul>
+        </div>
+      </aside>
+    </div>
+
+    <div class="toast" id="toast">
+      <span id="toastMessage">Added to cart!</span>
+    </div>
+
+    <footer class="footer" id="footer-root">
+    </footer>
+
+    <script type="module" defer src="./js/catalog.js"></script>
+    <script type="module" defer src="./js/main.js"></script>
+  </body>
+</html>

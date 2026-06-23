@@ -15,7 +15,7 @@ import { renderFooter } from "./footer.js";
 export function fetchProducts() {
     return __awaiter(this, void 0, void 0, function* () {
         try {
-            const res = yield fetch("/src/assets/data.json");
+            const res = yield fetch("./assets/data.json");
             if (!res.ok)
                 throw new Error(`HTTP error! status: ${res.status}`);
             return (yield res.json()).data;
@@ -33,7 +33,7 @@ export function renderDropdown(products) {
     dropdown.innerHTML = products
         .slice(0, 3)
         .map((p) => `
-    <a href="/src/html/product-details.html?id=${p.id}" class="dropdown__item" style="display:flex; align-items:center; gap:15px; padding:10px; text-decoration:none; color:black;">
+    <a href="product-details.html?id=${p.id}" class="dropdown__item" style="display:flex; align-items:center; gap:15px; padding:10px; text-decoration:none; color:black;">
       <img src="${p.imageUrl}" alt="" style="width:60px; height:60px; object-fit:cover; border-radius:4px;">
       <div style="display:flex; flex-direction:column;">
         <span style="font-weight:600; font-size:14px;">${p.name}</span>
